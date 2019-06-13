@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sdm660-common/proprietary/vendor/etc/permissions/com.motorola.motodisplay.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.motodisplay.xml \
     vendor/motorola/sdm660-common/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/motorola/sdm660-common/proprietary/etc/permissions/embms.xml:system/etc/permissions/embms.xml \
+    vendor/motorola/sdm660-common/proprietary/etc/permissions/com.qualcomm.atfwd.xml:system/etc/permissions/com.qualcomm.atfwd.xml \
     vendor/motorola/sdm660-common/proprietary/vendor/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qcrilhook.xml \
     vendor/motorola/sdm660-common/proprietary/vendor/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_libpermissions.xml \
     vendor/motorola/sdm660-common/proprietary/vendor/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_permissions.xml \
@@ -45,6 +46,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sdm660-common/proprietary/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar:system/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar \
     vendor/motorola/sdm660-common/proprietary/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar:system/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar \
     vendor/motorola/sdm660-common/proprietary/framework/vendor.qti.latency-V2.0-java.jar:system/framework/vendor.qti.latency-V2.0-java.jar \
+    vendor/motorola/sdm660-common/proprietary/lib/android.hardware.radio@1.0.so:system/lib/android.hardware.radio@1.0.so \
     vendor/motorola/sdm660-common/proprietary/lib/android.hardware.radio@1.1.so:system/lib/android.hardware.radio@1.1.so \
     vendor/motorola/sdm660-common/proprietary/lib/android.hardware.radio@1.2.so:system/lib/android.hardware.radio@1.2.so \
     vendor/motorola/sdm660-common/proprietary/lib/android.hardware.radio.config@1.0.so:system/lib/android.hardware.radio.config@1.0.so \
@@ -64,6 +66,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sdm660-common/proprietary/lib/vendor.qti.ims.rcsconfig@1.0.so:system/lib/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/motorola/sdm660-common/proprietary/lib/vendor.qti.imsrtpservice@1.0.so:system/lib/vendor.qti.imsrtpservice@1.0.so \
     vendor/motorola/sdm660-common/proprietary/lib/android.hardware.broadcastradio@1.0.so:system/lib/android.hardware.broadcastradio@1.0.so \
+    vendor/motorola/sdm660-common/proprietary/lib/android.hardware.broadcastradio@1.1.so:system/lib/android.hardware.broadcastradio@1.1.so \
     vendor/motorola/sdm660-common/proprietary/lib64/fm_helium.so:system/lib64/fm_helium.so \
     vendor/motorola/sdm660-common/proprietary/lib64/lib-imscamera.so:system/lib64/lib-imscamera.so \
     vendor/motorola/sdm660-common/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
@@ -82,9 +85,14 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sdm660-common/proprietary/lib64/vendor.qti.hardware.perf@1.0.so:system/lib64/vendor.qti.hardware.perf@1.0.so \
     vendor/motorola/sdm660-common/proprietary/lib64/vendor.qti.ims.rcsconfig@1.0.so:system/lib64/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/motorola/sdm660-common/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:system/lib64/vendor.qti.imsrtpservice@1.0.so \
+    vendor/motorola/sdm660-common/proprietary/lib64/android.hardware.broadcastradio@1.0.so:system/lib64/android.hardware.broadcastradio@1.0.so \
+    vendor/motorola/sdm660-common/proprietary/lib64/android.hardware.broadcastradio@1.1.so:system/lib/android.hardware.broadcastradio@1.1.so \
+    vendor/motorola/sdm660-common/proprietary/lib64/android.hardware.radio@1.0.so:system/lib64/android.hardware.radio@1.0.so \
     vendor/motorola/sdm660-common/proprietary/lib64/android.hardware.radio@1.1.so:system/lib64/android.hardware.radio@1.1.so \
     vendor/motorola/sdm660-common/proprietary/lib64/android.hardware.radio@1.2.so:system/lib64/android.hardware.radio@1.2.so \
     vendor/motorola/sdm660-common/proprietary/lib64/android.hardware.radio.config@1.0.so:system/lib64/android.hardware.radio.config@1.0.so \
+    vendor/motorola/sdm660-common/proprietary/lib64/libbrillo-binder.so:system/lib64/libbrillo-binder.so \
+    vendor/motorola/sdm660-common/proprietary/lib64/libbrillo-stream.so:system/lib64/libbrillo-stream.so \
     vendor/motorola/sdm660-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/motorola/sdm660-common/proprietary/vendor/bin/DR_AP_Service:$(TARGET_COPY_OUT_VENDOR)/bin/DR_AP_Service \
     vendor/motorola/sdm660-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
@@ -614,6 +622,8 @@ PRODUCT_PACKAGES += \
     libloc_api_v02 \
     CNEService \
     ims \
+    embms \
+    atfwd \
     qcrilmsgtunnel \
     QtiTelephonyService \
     TimeService \
